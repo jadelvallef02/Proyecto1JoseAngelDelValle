@@ -10,7 +10,7 @@ class Tet {
     }
 
     fun mandarDrones():Array<Dron?>{
-        var alea = Random.nextInt(0,2);
+        var alea = Random.nextInt(0,3);
         var drones = Array<Dron?>(alea+1){null}
         for(i in 0..alea){
             for (x in tet.indices){

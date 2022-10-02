@@ -17,3 +17,12 @@ fun mostrarTierra(tierra: Array<Array<Cuadrante?>>){
     }
     println()
 }
+
+fun recorrerTierraVerDrones(tierra: Array<Array<Cuadrante?>>): Array<Array<Cuadrante?>>{
+    for(i in tierra.indices){
+        for(j in tierra[i].indices){
+            tierra[i][j]!!.comprobarDrones()
+        }
+    }
+    return tierra
+}

@@ -14,10 +14,15 @@ fun main() {
             tet.actualizarOrdenes(tierra.tetRecorreTierra())
         }
         if(segundos % 20 == 0){
-
+            tierra.resolverOrdenes(tet)
         }
         segundos++
-    }while(segundos < 200);
+    }while(segundos < 220);
+
+    tierra.mostrarOrdenesTotales()
+    println("La cantidad de ordenes llevadas a cabo son "+tierra.devolverOrdenesCursadas())
+    println("Este es el estado de la Tierra: ")
+    tierra.mostrarTierra()
 
 }
 

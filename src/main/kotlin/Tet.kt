@@ -32,5 +32,17 @@ class Tet {
         return drones
     }
 
+    fun solicitarDron():Dron?{
+        for(i in tet.indices){
+            if(tet[i] != null){
+                var d = tet[i]
+                tet[i] = null
+                return d
+                break
+            }
+        }
+     return null
+    }
+
 
 }

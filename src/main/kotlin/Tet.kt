@@ -2,6 +2,7 @@ import kotlin.random.Random
 
 class Tet {
    private var tet = Array<Dron?>(100){null}
+    private var ordenesCursadas = ArrayList<Orden>()
 
     fun iniciarTet(){
         for (i in tet.indices){
@@ -9,6 +10,9 @@ class Tet {
         }
     }
 
+    fun actualizarOrdenes(ordenes:ArrayList<Orden>){
+        ordenesCursadas = ordenes
+    }
     fun mandarDrones():Array<Dron?>{
         var alea = Random.nextInt(0,3);
         var drones = Array<Dron?>(alea+1){null}
@@ -23,6 +27,7 @@ class Tet {
         }
         return drones
     }
+
 
 
 }

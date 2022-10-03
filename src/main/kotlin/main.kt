@@ -1,16 +1,18 @@
-import java.util.Date
+
 fun main() {
     var segundos = 0
     var tet = Tet()
-    var tierra = Array<Array<Cuadrante?>>(3) { Array<Cuadrante?>(3) { null } }
+    var tierra = iniciarTierra(tet)
     tet.iniciarTet()
-    tierra = iniciarTierra(tet)
     mostrarTierra(tierra)
     do{
         if (segundos % 4 == 0) {
             tierra = recorrerTierraVerDrones(tierra)
         }
         if (segundos % 10 == 0){
+            tet.actualizarOrdenes(tetRecorreTierra(tierra))
+        }
+        if(segundos % 20 == 0){
 
         }
         segundos++

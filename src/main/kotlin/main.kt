@@ -19,7 +19,7 @@ fun main() {
         segundos++
     }while(segundos < 220);
 
-    tierra.mostrarOrdenesTotales()
+    tet.mostrarOrdenesTotales(tierra)
     println("La cantidad de ordenes llevadas a cabo son "+tierra.devolverOrdenesCursadas())
     println("Este es el estado de la Tierra: ")
     tierra.mostrarTierra()

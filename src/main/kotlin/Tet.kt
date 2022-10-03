@@ -44,5 +44,13 @@ class Tet {
      return null
     }
 
+    fun mostrarOrdenesTotales(tierra:Tierra){
+        println("Estas son todas las ordenes llevadas a cabo: ")
+        for(i in tierra.cuadrantes.indices){
+            for(j in tierra.cuadrantes[i].indices){
+                tierra.cuadrantes[i][j]!!.mostrarOrdenes()
+            }
+        }
+    }
 
 }

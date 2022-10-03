@@ -2,15 +2,16 @@
 fun main() {
     var segundos = 0
     var tet = Tet()
-    var tierra = iniciarTierra(tet)
+    var tierra = Tierra()
     tet.iniciarTet()
-    mostrarTierra(tierra)
+    tierra.iniciarTierra(tet)
+    tierra.mostrarTierra()
     do{
         if (segundos % 4 == 0) {
-            tierra = recorrerTierraVerDrones(tierra)
+           tierra.recorrerTierraVerDrones()
         }
         if (segundos % 10 == 0){
-            tet.actualizarOrdenes(tetRecorreTierra(tierra))
+            tet.actualizarOrdenes(tierra.tetRecorreTierra())
         }
         if(segundos % 20 == 0){
 

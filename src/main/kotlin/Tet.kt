@@ -1,3 +1,5 @@
+import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.random.Random
 
 class Tet {
@@ -6,12 +8,14 @@ class Tet {
 
     fun iniciarTet(){
         for (i in tet.indices){
-            tet[i] = FactoriasDron.factoriaDronGenerico(i);
+            tet[i] = FactoriasDron.factoriaDronGenerico(i)
         }
     }
 
     fun actualizarOrdenes(ordenes:ArrayList<Orden>){
-        ordenesCursadas = ordenes
+        for(i in ordenes.indices){
+            ordenesCursadas.add(ordenes[i])
+        }
     }
     fun mandarDrones():Array<Dron?>{
         var alea = Random.nextInt(0,3);
@@ -20,14 +24,13 @@ class Tet {
             for (x in tet.indices){
                 if(tet[x] != null){
                     drones[i] = tet[x]
-                    tet[x]=null;
+                    tet[x]=null
                     break
                 }
             }
         }
         return drones
     }
-
 
 
 }
